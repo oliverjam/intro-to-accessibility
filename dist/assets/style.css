@@ -1,0 +1,389 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 87.5%;
+}
+
+@media (min-width: 40em) {
+  html {
+    font-size: 125%;
+  }
+}
+
+body {
+  font-family: Georgia, georgia, serif;
+  font-size: calc(0.875rem + 1vw);
+  line-height: 1.3;
+  color: #444;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  text-decoration-skip: ink;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  /*font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';*/
+  line-height: 1;
+  /*color: #555;*/
+}
+
+h1 {
+  font-size: 3.157em;
+}
+
+h2 {
+  font-size: 2.369em;
+}
+
+h3 {
+  font-size: 1.777em;
+}
+
+h4 {
+  font-size: 1.333em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  margin-top: 1em;
+  padding-left: 1em;
+}
+
+blockquote {
+  padding-left: 1em;
+  border-left: 0.5em solid magenta;
+  font-style: italic;
+}
+
+cite {
+  font-style: normal;
+}
+
+abbr {
+  font-variant-caps: all-small-caps;
+}
+
+pre {
+  margin-top: 1em;
+  padding: 1em;
+  max-width: 20rem;
+  font-size: 0.8rem;
+  color: #fbfaf9;
+  background-color: #444;
+  border-radius: 2px;
+}
+
+@media (min-width: 40em) {
+  pre {
+    font-size: 1.125rem;
+    max-width: 50rem;
+  }
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  border: 8px solid magenta;
+  overflow-x: hidden;
+}
+
+@media (min-width: 40em) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  .container.js-enabled {
+    overflow: hidden;
+  }
+}
+
+.slide {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1em;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
+}
+@media (min-width: 40em) {
+  .slide {
+    padding: 2em 6em;
+  }
+}
+.slide > * + * {
+  margin-top: 0.75em;
+}
+.slide--image {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.slide--image > .slide__content {
+  -ms-flex-preferred-size: 60%;
+  flex-basis: 60%;
+}
+.slide--image > .slide__content > p {
+  max-width: 100%;
+}
+.slide__embed {
+  margin-top: 1em;
+  position: relative;
+  width: calc(100vw * 0.66);
+  height: calc(56.25vw * 0.66);
+}
+.slide__embed > iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.nav {
+  display: none;
+}
+
+@media (min-width: 40em) {
+  .nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 1.5em;
+  }
+  .nav__button {
+    padding: 0.5em;
+    color: #666;
+    background: none;
+    border: none;
+  }
+  .nav__button:disabled {
+    display: none;
+  }
+  .nav__button:focus {
+    outline: none;
+  }
+}
+
+.icon {
+  vertical-align: middle;
+}
+
+.progress {
+  font-size: 0.875em;
+  color: #666;
+}
+
+/*
+Name:   Duotone Light
+Author: Simurai, adapted from DuoTone themes for Atom (http://simurai.com/projects/2016/01/01/duotone-themes)
+
+Conversion: Bram de Haan (http://atelierbram.github.io/Base2Tone-prism/output/prism/prism-base2tone-morning-light.css)
+Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
+*/
+
+code,
+pre[class*='language-'] {
+  font-family: Consolas, Menlo, Monaco, 'Andale Mono WT', 'Andale Mono',
+    'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono',
+    'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L',
+    'Courier New', Courier, monospace;
+  font-size: 0.85em;
+  line-height: 1.375;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  background: #faf8f5;
+  color: #728fcb;
+}
+
+/* Code blocks */
+pre[class*='language-'] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+}
+
+/* Inline code */
+:not(pre) > code {
+  padding: 0.1em;
+  border-radius: 4px;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #b6ad9a;
+}
+
+.token.punctuation {
+  color: #b6ad9a;
+}
+
+.token.namespace {
+  opacity: 0.7;
+}
+
+.token.tag,
+.token.operator,
+.token.number {
+  color: #063289;
+}
+
+.token.property,
+.token.function {
+  color: #b29762;
+}
+
+.token.tag-id,
+.token.selector,
+.token.atrule-id {
+  color: #2d2006;
+}
+
+code.language-javascript,
+.token.attr-name {
+  color: #896724;
+}
+
+code.language-css,
+code.language-scss,
+.token.boolean,
+.token.string,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.language-scss .token.string,
+.style .token.string,
+.token.attr-value,
+.token.keyword,
+.token.control,
+.token.directive,
+.token.unit,
+.token.statement,
+.token.regex,
+.token.atrule {
+  color: #728fcb;
+}
+
+.token.placeholder,
+.token.variable {
+  color: #93abdc;
+}
+
+.token.deleted {
+  text-decoration: line-through;
+}
+
+.token.inserted {
+  border-bottom: 1px dotted #2d2006;
+  text-decoration: none;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.important {
+  color: #896724;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+pre > code.highlight {
+  outline: 0.4em solid #896724;
+  outline-offset: 0.4em;
+}
+
+/* overrides color-values for the Line Numbers plugin
+ * http://prismjs.com/plugins/line-numbers/
+ */
+.line-numbers .line-numbers-rows {
+  border-right-color: #ece8de;
+}
+
+.line-numbers-rows > span:before {
+  color: #cdc4b1;
+}
+
+/* overrides color-values for the Line Highlight plugin
+ * http://prismjs.com/plugins/line-highlight/
+ */
+.line-highlight {
+  background: rgba(45, 32, 6, 0.2);
+  background: -webkit-linear-gradient(
+    left,
+    rgba(45, 32, 6, 0.2) 70%,
+    rgba(45, 32, 6, 0)
+  );
+  background: linear-gradient(
+    to right,
+    rgba(45, 32, 6, 0.2) 70%,
+    rgba(45, 32, 6, 0)
+  );
+}

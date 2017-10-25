@@ -1,0 +1,29 @@
+{
+  "name": "accessibility",
+  "version": "1.0.0",
+  "description": "https://src-yqbqdyglpz.now.sh/",
+  "main": "index.js",
+  "scripts": {
+    "generate": "nodemon --ext js,md src/generate-html.js index.md",
+    "serve": "browser-sync start --server 'dist' --files 'dist' --no-notify",
+    "start": "npm-run-all --parallel generate serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oliverjam/minimal-pwa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oliverjam/minimal-pwa/issues"
+  },
+  "homepage": "https://github.com/oliverjam/minimal-pwa#readme",
+  "dependencies": {
+    "browser-sync": "^2.18.13"
+  },
+  "devDependencies": {
+    "marked": "^0.3.6",
+    "nodemon": "^1.12.1",
+    "npm-run-all": "^4.1.1"
+  }
+}
