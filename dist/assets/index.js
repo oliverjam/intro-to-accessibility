@@ -1,15 +1,17 @@
 const keyCodes = {
   left: 37,
+  up: 38,
   right: 39,
+  down: 40,
 };
 
 const slides = Array.from(document.querySelectorAll('.slide'));
-const progress = document.querySelector('.progress');
+slides.forEach((slide, i) => (slide.id = `slide-${i}`));
 
 let currentSlide = 0;
 
 function scroll(e) {
-  if (e.keyCode === keyCodes.left) {
+  if (e.keyCode === keyCodes.up) {
     if (e.preventDefault) e.preventDefault();
     if (currentSlide > 0) {
       scrollToSlide(currentSlide - 1);
@@ -23,7 +25,7 @@ function scroll(e) {
       return;
     }
   }
-  if (e.keyCode === keyCodes.right) {
+  if (e.keyCode === keyCodes.down) {
     if (e.preventDefault) e.preventDefault();
     if (currentSlide < slides.length - 1) {
       updateProgress(currentSlide + 1);
@@ -40,26 +42,17 @@ function scroll(e) {
 }
 
 function scrollToSlide(index) {
-  return slides[index].scrollIntoView({ behavior: 'smooth' });
+  window.location.href = window.location.origin + `#slide-${index}`;
 }
 
 document.addEventListener('keydown', scroll);
 
-const container = document.querySelector('.container');
-container.classList.add('js-enabled');
+document.querySelector('.container').classList.add('hijack');
 
-const buttons = document.querySelectorAll('.nav__button');
-buttons.forEach(button => {
-  button.removeAttribute('disabled');
-  const keyCode = parseInt(button.dataset.direction, 10);
-  button.addEventListener('click', () => {
-    scroll({ keyCode: keyCode });
-  });
-});
 function updateProgress(index) {
-  progress.innerHTML = `
-    <span>${index + 1}/${slides.length}</span>
-  `;
+  document.querySelector('.progress').textContent = `${index + 1} / ${
+    slides.length
+  }`;
 }
 
 updateProgress(currentSlide);
