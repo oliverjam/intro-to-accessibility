@@ -19,32 +19,29 @@ module.exports = ({ content }) => `
     ${content}
     </section>
   </main>
-  <nav class="nav">
-    <button class="nav__button" data-direction="37" disabled>
-      <svg class="icon" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M20 30 L8 16 20 2"></path>
-        </svg>
-    </button>
-    <div class="progress"></div>
-    <button class="nav__button" data-direction="39" disabled>
-      <svg class="icon" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M12 30 L24 16 12 2"></path>
-        </svg>
-    </button>
-  </nav>
+  <svg class="progress">
+    <circle
+    class="progress-ring__circle"
+    stroke="white"
+    stroke-width="4"
+    fill="transparent"
+    r="52"
+    cx="60"
+    cy="60"/>
+  </svg>
     <script src='/assets/index.js'></script>
     <script src='/assets/prism.js'></script>
     <script>
-if ('serviceWorker' in navigator) {
-   navigator.serviceWorker
-   .register('/service-worker.js')
-   .then(() => {
-     console.log('Service worker registered');
-   })
-   .catch(err => {
-     console.log('Service worker registration failed: ' + err);
-   });
-}
+// if ('serviceWorker' in navigator) {
+//    navigator.serviceWorker
+//    .register('/service-worker.js')
+//    .then(() => {
+//      console.log('Service worker registered');
+//    })
+//    .catch(err => {
+//      console.log('Service worker registration failed: ' + err);
+//    });
+// }
 </script>
   </body>
   </html>
