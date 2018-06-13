@@ -30,11 +30,14 @@
 <p>—<cite><a href="http://seldo.com/weblog/2013/09/04/why_i_am_a_web_developer">@seldo</a>, npm <abbr>CTO</abbr></cite></p>
 <p>Something <em>is</em> stopping people.</p>
 </section><section class="slide">
-<p>Accessibility shouldn’t be a special effort. It’s about building a product that as many people as possible can use.</p>
-<p>HTML is (generally) accessible by default. Accessibility means ensuring you don’t put up barriers by “improving” your product.</p>
+<p>Accessibility shouldn’t be a special effort</p>
 </section><section class="slide">
-<p>User-experience is everything for the products you build. Accessibility is just another part of this—designing for all the different ways people are going to use it.</p>
-<p>Think of it not as designing for specific disabilities but designing for a diverse set of use-cases.</p>
+<p>HTML is (generally) accessible by default.<br>Don’t put up barriers by “improving” your product.</p>
+</section><section class="slide">
+<p>Accessibility is just a part of UX.</p>
+<p>Not designing for specific disabilities but for a diverse set of use-cases.</p>
+</section><section class="slide">
+<p>Good design is inclusive</p>
 </section><section class="slide">
 <h2 id="accessibility-is-for-everyone">Accessibility is for everyone</h2>
 <p>It benefits more people than you might think.</p>
@@ -42,24 +45,24 @@
 <h3 id="permanent-impairment">Permanent impairment</h3>
 <ul>
 <li>10m people in the UK are disabled (~17% of the population)</li>
-<li>Half of these are over state pension age</li>
-<li>4.5% of the population are colour-blind (double that for men)</li>
+<li>Half are over state pension age</li>
+<li>4.5% of the population are colour-blind (9% of men)</li>
 </ul>
 </section><section class="slide">
 <h3 id="temporary-or-situational-impairment">Temporary or situational impairment</h3>
-<p>Literally anyone can benefit from good accessible design. People get injured temporarily, or are in situations that limit the way they can interact with your product.</p>
+<p>Everyone benefits from good accessible design.</p>
 </section><section class="slide">
-<h3 id="examples">Examples</h3>
+<h4 id="high-contrast">High contrast</h4>
+<p>user with poor vision<br><em>or</em><br>me reading my phone in bright sunlight 😎</p>
 </section><section class="slide">
-<p>Somebody with poor-vision will appreciate your high-contrast interface, but so will I if I’m struggling to read in bright sunlight.</p>
+<h4 id="captioned-videos">Captioned videos</h4>
+<p>deaf user<br><em>or</em><br>me when I forget my headphones at work 🎧</p>
 </section><section class="slide">
-<p>Captioning your videos means blind people can still experience them, but it also means someone bored at work can watch it under the desk.</p>
-</section><section class="slide">
-<p>Ensuring your mobile navigation is all within easy thumb-reach obviously benefits somebody with one hand, but it also helps a user holding a baby (or drinking a beer).</p>
+<h5 id="one-handed-navigation">One-handed navigation</h5>
+<p>user with one arm<br><em>or</em><br>me drinking a beer 🍺</p>
 </section><section class="slide">
 <h2 id="don-t-make-assumptions">Don’t make assumptions</h2>
-<p>It’s easy to assume that the majority of your users will be like you or people that you know.</p>
-<p>This is unlikely, and untrue for most people at different times in their lives.</p>
+<p>Not all users are like you or your teammates</p>
 </section><section class="slide">
 <p>Not everyone <em>always</em> has great eyesight.</p>
 <p>Not everyone <em>always</em> has a powerful modern device.</p>
@@ -68,87 +71,120 @@
 </section><section class="slide">
 <h2 id="user-personas">User personas</h2>
 </section><section class="slide">
-<h3 id="visual">Visual</h3>
-</section><section class="slide">
 <h4 id="colour-blind">Colour-blind</h4>
-<p>I am colour-blind and struggle to perceive the difference between certain colours.</p>
-<p>I need an interface that does not rely solely on colour to communicate information (or that provides an option to change the colours so I can tell them apart).</p>
+<p>May struggle to perceive the difference between certain colours.</p>
+<ul>
+<li>Do note rely solely on colour</li>
+<li>Allow customisation/colour-blind mode</li>
+</ul>
 </section><section class="slide">
 <p><img src="assets/img/football.png" alt=""></p>
 </section><section class="slide">
 <h4 id="low-vision">Low-vision</h4>
-<p>I have low-vision and need to increase the text-size in my browser.</p>
-<p>I need an interface that does not stop me from increasing text-size, and that scales proportionally when I do so (rather than completely breaking).</p>
+<p>May need to increase the text-size in my browser.</p>
+<ul>
+<li>Do not prevent zoom</li>
+<li>Scale UI based on font-size</li>
+</ul>
 </section><section class="slide">
 <p><img src="assets/img/nytimes.png" alt=""></p>
 </section><section class="slide">
 <h4 id="low-vision">Low-vision</h4>
-<p>I have very low-vision and need to use a screen-magnifier.</p>
-<p>I need an interface that shows things in context so I don’t have to go searching the page. It also helps to have a logical content-flow as I can only see one thing at a time.</p>
+<p>May need to use a screen-magnifier.</p>
+<ul>
+<li>Show things in context</li>
+<li>Logical content flow</li>
+</ul>
 </section><section class="slide">
 <h4 id="blind">Blind</h4>
-<p>I am blind and need to use a screenreader.</p>
-<p>I need an interface that does not present information solely visually. I need the content to be accessible programmatically so my screenreader software can access it and correctly describe the page to me.</p>
-</section><section class="slide">
-<h3 id="hearing">Hearing</h3>
+<p>Need to use a screenreader.</p>
+<ul>
+<li>Information isn’t solely visual</li>
+<li>Programmatic access to structured content</li>
+</ul>
 </section><section class="slide">
 <h4 id="hard-of-hearing">Hard-of-hearing</h4>
-<p>I am hard-of-hearing and struggle to hear most things.</p>
-<p>I need content that is provided in a text as well as audio form, so I can read it rather than struggling to listen. This includes transcripts and/or subtitles for video/audio content.</p>
+<p>May struggle to hear things.</p>
+<ul>
+<li>Provide text alternatives to audio content</li>
+<li>Transcripts and/or subtitles</li>
+</ul>
 </section><section class="slide">
 <h4 id="deaf">Deaf</h4>
-<p>I am deaf and cannot hear anything.</p>
-<p>British Sign Language is my first language, so I struggle to read and write English. Subtitles are difficult for me to follow so I prefer signed content.</p>
-<p>I also need an option for non-phone communication.</p>
-</section><section class="slide">
-<h3 id="motor">Motor</h3>
+<p>Cannot hear anything. Sign language may be first language</p>
+<ul>
+<li>Subtitles can be hard to follow, may prefer signed content</li>
+<li>Option for non-phone communication</li>
+</ul>
 </section><section class="slide">
 <h4 id="mild-motor-impairment">Mild motor-impairment</h4>
-<p>I have mild motor-impairment and struggle to use a mouse or touchscreen with fine control.</p>
-<p>I need an interface that doesn’t require me to exactly hit small targets to complete tasks. UI elements with lots of padding help me click them without frustration.</p>
+<p>May struggle to use a mouse or touchscreen with fine control.</p>
+<ul>
+<li>Large interactive targets</li>
+<li>Lots of padding for links/buttons</li>
+</ul>
 </section><section class="slide">
 <h4 id="medium-motor-impairment">Medium motor-impairment</h4>
-<p>I have medium motor-impairment and have to use a keyboard instead of a mouse.</p>
-<p>I need an interface that clearly shows the elements I am focusing with the keyboard, and doesn’t assume all users are able to click on things. A logical document flow also helps so my focus doesn’t jump around the page as I navigate.</p>
+<p>Have to use a keyboard instead of a mouse.</p>
+<ul>
+<li>DON’T DISABLE FOCUS OUTLINES</li>
+<li>Logical document flow so focus doesn’t jump around</li>
+<li>Ensure custom UI works without a mouse</li>
+</ul>
 </section><section class="slide">
 <h4 id="severe-motor-impairment">Severe motor-impairment</h4>
-<p>I have severe motor-impairment and use voice-input instead of a mouse or keyboard.</p>
-<p>I need an interface that works with my custom speech-recognition software and has logical labels so I can describe what I want to interact with.</p>
-</section><section class="slide">
-<h3 id="cognitive">Cognitive</h3>
+<p>Uses voice-input instead of a mouse or keyboard.</p>
+<ul>
+<li>Test interface with speech-recognition software</li>
+<li>Logical labels as they have to describe UI elements</li>
+</ul>
 </section><section class="slide">
 <h4 id="dyslexia">Dyslexia</h4>
-<p>I have dyslexia and struggle to process written text or spell.</p>
-<p>I need inputs that don’t require exact spelling to figure out what I meant. I also prefer content written in simple English that has clear subheadings dividing up sections.</p>
+<p>May struggle to process written text or spell.</p>
+<ul>
+<li>Don’t require exact spelling</li>
+<li>Write content in simple English</li>
+<li>Clear subheadings to divide content</li>
+</ul>
 </section><section class="slide">
 <h4 id="autism">Autism</h4>
-<p>I am on the autistic spectrum and struggle to process information.</p>
-<p>I need an interface that is clear and descriptive without using idioms or figures of speech. I also prefer plain language and simple colours.</p>
+<p>May struggle to process information.</p>
+<ul>
+<li>Clear, descriptive interface</li>
+<li>Avoid idioms or figures of speech</li>
+<li>Maybe prefer plain language and simple colours</li>
+</ul>
 </section><section class="slide">
 <h4 id="adhd">ADHD</h4>
-<p>I have attention deficit hyperactivity disorder and find it hard to concentrate.</p>
-<p>I need an interface that doesn’t distract me with unrelated pop-ups or information whilst I’m trying to focus on a task.</p>
+<p>May find it hard to concentrate.</p>
+<ul>
+<li>Don’t distract the user!</li>
+<li>No popups or alerts during important tasks</li>
+</ul>
 </section><section class="slide">
 <h4 id="memory">Memory</h4>
-<p>I have a poor memory and get easily confused.</p>
-<p>I need apps not to require me to memorise information from previous steps. I’d also rather not have a time-limit to complete a task.</p>
+<p>May struggle to remember previous information or get easily confused.</p>
+<ul>
+<li>Don’t require memorising info from previous steps</li>
+<li>Avoid time-limits for task-completion</li>
+</ul>
 </section><section class="slide">
 <h2 id="how-do-we-design-accessibly-">How do we design accessibly?</h2>
 </section><section class="slide">
 <h3 id="wcag">WCAG</h3>
 <p>The Web Content Accessibility Guidelines are a set of best practices.<br>To meet guidelines sites should be:</p>
 <ul>
-<li>Perceivable</li>
-<li>Operable</li>
-<li>Understandable</li>
-<li>Robust</li>
+<li><strong>P</strong>erceivable</li>
+<li><strong>O</strong>perable</li>
+<li><strong>U</strong>nderstandable</li>
+<li><strong>R</strong>obust</li>
 </ul>
 </section><section class="slide">
 <h3 id="cheatsheet">Cheatsheet</h3>
-<p>The guidelines can be quite dry and hard to follow, so take a look at this amazing cheatsheet:<br><a href="https://bitsofco.de/the-accessibility-cheatsheet/">bitsofco.de/the-accessibility-cheatsheet</a></p>
+<p>The guidelines can be quite dry, so here’s a cheatsheet:<br><a href="https://bitsofco.de/the-accessibility-cheatsheet/">bitsofco.de/the-accessibility-cheatsheet</a></p>
 </section><section class="slide">
 <h4 id="perceivable">Perceivable</h4>
-<p>Information and user interface components must be presented to users in ways they can perceive.</p>
+<p>Can all users perceive your UI?</p>
 <p>e.g. text with sufficient size/contrast/line-height, images with alt-text, alerting screenreaders to dynamic content.</p>
 </section><section class="slide">
 <h4 id="operable">Operable</h4>
@@ -160,30 +196,31 @@
 <p>e.g. use plain English, set the <code>lang</code> attribute, label inputs, provide error messages in context.</p>
 </section><section class="slide">
 <h4 id="robust">Robust</h4>
-<p>Content should be robust enough to be interpreted by a wide range of user-agents, including assistive technologies.</p>
+<p>Can your content be understood by different user-agents/assistive tech?</p>
 <p>e.g. semantic HTML (and ARIA when this fails you), automated and manual testing.</p>
 </section><section class="slide">
 <h2 id="wai-aria">WAI-ARIA</h2>
 <p>Stands for <em>Web Accessibility Initiative – Accessible Rich Internet Applications</em>…</p>
 <p>A spec for assigning meaning to otherwise meaningless chunks of markup.</p>
 </section><section class="slide">
-<p>It’s usually used in web-applications where functionality is added with JavaScript, which goes beyond the capabilities of semantic <abbr>HTML</abbr>. It can turn div-soup into something a screenreader can understand.</p>
+<h3 id="aria-gives-divs-superpowers">ARIA gives divs superpowers</h3>
+</section><section class="slide">
+<p>Useful where functionality is added with JS, when you’re beyond semantic <abbr>HTML</abbr>.</p>
+<p>Turn div-soup into something a screenreader can understand.</p>
 </section><section class="slide">
 <h3 id="labels">Labels</h3>
-<p>If your content is visually obvious, but would be incomprehensible when read out by a screenreader you probably need to label it.</p>
-<p><code>aria-label</code> lets you provide an extra description of an element: <code>&lt;button aria-label=&quot;menu button&quot;&gt;☰&lt;/button&gt;</code></p>
+<p>Visually obvious content might need a text label.</p>
+<p>e.g. <code>&lt;button aria-label=&quot;menu button&quot;&gt;☰&lt;/button&gt;</code></p>
 </section><section class="slide">
 <h3 id="roles">Roles</h3>
-<p>If you are replicating native browser functionality with JavaScript, roles can add screenreader functionality.</p>
-<p>For example a custom <code>&lt;select&gt;</code> using divs could use <code>role=&quot;listbox&quot;</code> to communicate its purpose.</p>
+<p>Signifies your custom component as a type assistive tech can recognise.</p>
+<p>e.g. a custom <code>&lt;select&gt;</code> using divs could use <code>role=&quot;listbox&quot;</code>.</p>
 </section><section class="slide">
 <h3 id="live-regions">Live regions</h3>
-<p>Screenreaders don’t usually read out content that gets dynamically added to the page. <code>aria-live</code> marks a region to be watched and read out whenever the content changes.</p>
-<p>Two values: “polite” or “assertive”. Polite will be read once the current task is complete, but assertive will interrupt.</p>
+<p>Ensures dynamically updated content is read out.</p>
+<p><code>aria-live=&quot;polite&quot;</code> will be read once the current info finished, <code>aria-live=&quot;assertive&quot;</code> will interrupt.</p>
 </section><section class="slide">
 <p><img src="assets/img/aria-live.png" alt=""></p>
-</section><section class="slide">
-<h2 id="demo-time-">Demo time 😰</h2>
 </section><section class="slide">
 <h2 id="resources">Resources</h2>
 <ul>

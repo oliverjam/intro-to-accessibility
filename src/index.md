@@ -1,12 +1,13 @@
 # Accessibility for Everyone
-[@_oliverjam](https://twitter.com/_oliverjam)
+
+[@\_oliverjam](https://twitter.com/_oliverjam)
 [oliverjam.es](http://oliverjam.es)
 
 ---
 
 ## The web rules
 
-The web is special. It's incredible. Sometimes I'm reminded of how things used to be, before the web, and it blows my mind.
+The web is special. It's incredible. Remember how things used to be?
 
 ---
 
@@ -14,23 +15,30 @@ The web is special. It's incredible. Sometimes I'm reminded of how things used t
 
 ---
 
->The web has everything we know on it, and you can read it all. **Nothing's stopping you**. Maybe the fact that that still blows my mind marks me as an old fogey, but honestly, how can that not blow your mind?
+> The web has everything we know on it, and you can read it all. **Nothing's stopping you**. Maybe the fact that that still blows my mind marks me as an old fogey, but honestly, how can that not blow your mind?
 
 —<cite>[@seldo](http://seldo.com/weblog/2013/09/04/why_i_am_a_web_developer), npm <abbr>CTO</abbr></cite>
 
-Something *is* stopping lots of people.
+Something _is_ stopping people.
 
 ---
 
-Accessibility shouldn't be a special effort. It's about building a product that as many people as possible can use.
-
-HTML is (generally) accessible by default. Accessibility means ensuring you don't put up barriers by "improving" your product.
+Accessibility shouldn't be a special effort
 
 ---
 
-User-experience is everything for the products you build. Accessibility is just another part of this—designing for all the different ways people are going to use it.
+HTML is (generally) accessible by default.
+Don't put up barriers by "improving" your product.
 
-Think of it not as designing for specific disabilities but designing for a diverse set of use-cases.
+---
+
+Accessibility is just a part of UX.
+
+Not designing for specific disabilities but for a diverse set of use-cases.
+
+---
+
+Good design is inclusive
 
 ---
 
@@ -43,38 +51,44 @@ It benefits more people than you might think.
 ### Permanent impairment
 
 - 10m people in the UK are disabled (~17% of the population)
-- Half of these are over state pension age
-- 4.5% of the population are colour-blind (double that for men)
+- Half are over state pension age
+- 4.5% of the population are colour-blind (9% of men)
 
 ---
 
 ### Temporary or situational impairment
 
-Literally anyone can benefit from good accessible design. People get injured temporarily, or are in situations that limit the way they can interact with your product.
+Everyone benefits from good accessible design.
 
 ---
 
-### Examples
+#### High contrast
+
+user with poor vision
+_or_
+me reading my phone in bright sunlight 😎
 
 ---
 
-Somebody with poor-vision will appreciate your high-contrast interface, but so will I if I'm struggling to read in bright sunlight.
+#### Captioned videos
+
+deaf user
+_or_
+me when I forget my headphones at work 🎧
 
 ---
 
-Captioning your videos means blind people can still experience them, but it also means someone bored at work can watch it under the desk.
+##### One-handed navigation
 
----
-
-Ensuring your mobile navigation is all within easy thumb-reach obviously benefits somebody with one hand, but it also helps a user holding a baby (or drinking a beer).
+user with one arm
+_or_
+me drinking a beer 🍺
 
 ---
 
 ## Don't make assumptions
 
-It's easy to assume that the majority of your users will be like you or people that you know.
-
-This is unlikely, and untrue for most people at different times in their lives.
+Not all users are like you or your teammates
 
 ---
 
@@ -92,15 +106,12 @@ Not everyone _always_ chooses the browser they use.
 
 ---
 
-### Visual
-
----
-
 #### Colour-blind
 
-I am colour-blind and struggle to perceive the difference between certain colours.
+May struggle to perceive the difference between certain colours.
 
-I need an interface that does not rely solely on colour to communicate information (or that provides an option to change the colours so I can tell them apart).
+- Do note rely solely on colour
+- Allow customisation/colour-blind mode
 
 ---
 
@@ -110,9 +121,10 @@ I need an interface that does not rely solely on colour to communicate informati
 
 #### Low-vision
 
-I have low-vision and need to increase the text-size in my browser.
+May need to increase the text-size in my browser.
 
-I need an interface that does not stop me from increasing text-size, and that scales proportionally when I do so (rather than completely breaking).
+- Do not prevent zoom
+- Scale UI based on font-size
 
 ---
 
@@ -122,103 +134,103 @@ I need an interface that does not stop me from increasing text-size, and that sc
 
 #### Low-vision
 
-I have very low-vision and need to use a screen-magnifier.
+May need to use a screen-magnifier.
 
-I need an interface that shows things in context so I don't have to go searching the page. It also helps to have a logical content-flow as I can only see one thing at a time.
+- Show things in context
+- Logical content flow
 
 ---
 
 #### Blind
 
-I am blind and need to use a screenreader.
+Need to use a screenreader.
 
-I need an interface that does not present information solely visually. I need the content to be accessible programmatically so my screenreader software can access it and correctly describe the page to me.
-
----
-
-### Hearing
+- Information isn't solely visual
+- Programmatic access to structured content
 
 ---
 
 #### Hard-of-hearing
 
-I am hard-of-hearing and struggle to hear most things.
+May struggle to hear things.
 
-I need content that is provided in a text as well as audio form, so I can read it rather than struggling to listen. This includes transcripts and/or subtitles for video/audio content.
+- Provide text alternatives to audio content
+- Transcripts and/or subtitles
 
 ---
 
 #### Deaf
 
-I am deaf and cannot hear anything.
+Cannot hear anything. Sign language may be first language
 
-British Sign Language is my first language, so I struggle to read and write English. Subtitles are difficult for me to follow so I prefer signed content.
-
-I also need an option for non-phone communication.
-
----
-
-### Motor
+- Subtitles can be hard to follow, may prefer signed content
+- Option for non-phone communication
 
 ---
 
 #### Mild motor-impairment
 
-I have mild motor-impairment and struggle to use a mouse or touchscreen with fine control.
+May struggle to use a mouse or touchscreen with fine control.
 
-I need an interface that doesn't require me to exactly hit small targets to complete tasks. UI elements with lots of padding help me click them without frustration.
+- Large interactive targets
+- Lots of padding for links/buttons
 
 ---
 
 #### Medium motor-impairment
 
-I have medium motor-impairment and have to use a keyboard instead of a mouse.
+Have to use a keyboard instead of a mouse.
 
-I need an interface that clearly shows the elements I am focusing with the keyboard, and doesn't assume all users are able to click on things. A logical document flow also helps so my focus doesn't jump around the page as I navigate.
+- DON'T DISABLE FOCUS OUTLINES
+- Logical document flow so focus doesn't jump around
+- Ensure custom UI works without a mouse
 
 ---
 
 #### Severe motor-impairment
 
-I have severe motor-impairment and use voice-input instead of a mouse or keyboard.
+Uses voice-input instead of a mouse or keyboard.
 
-I need an interface that works with my custom speech-recognition software and has logical labels so I can describe what I want to interact with.
-
----
-
-### Cognitive
+- Test interface with speech-recognition software
+- Logical labels as they have to describe UI elements
 
 ---
 
 #### Dyslexia
 
-I have dyslexia and struggle to process written text or spell.
+May struggle to process written text or spell.
 
-I need inputs that don't require exact spelling to figure out what I meant. I also prefer content written in simple English that has clear subheadings dividing up sections.
+- Don't require exact spelling
+- Write content in simple English
+- Clear subheadings to divide content
 
 ---
 
 #### Autism
 
-I am on the autistic spectrum and struggle to process information.
+May struggle to process information.
 
-I need an interface that is clear and descriptive without using idioms or figures of speech. I also prefer plain language and simple colours.
+- Clear, descriptive interface
+- Avoid idioms or figures of speech
+- Maybe prefer plain language and simple colours
 
 ---
 
 #### ADHD
 
-I have attention deficit hyperactivity disorder and find it hard to concentrate.
+May find it hard to concentrate.
 
-I need an interface that doesn't distract me with unrelated pop-ups or information whilst I'm trying to focus on a task.
+- Don't distract the user!
+- No popups or alerts during important tasks
 
 ---
 
 #### Memory
 
-I have a poor memory and get easily confused.
+May struggle to remember previous information or get easily confused.
 
-I need apps not to require me to memorise information from previous steps. I'd also rather not have a time-limit to complete a task.
+- Don't require memorising info from previous steps
+- Avoid time-limits for task-completion
 
 ---
 
@@ -231,23 +243,23 @@ I need apps not to require me to memorise information from previous steps. I'd a
 The Web Content Accessibility Guidelines are a set of best practices.
 To meet guidelines sites should be:
 
-- Perceivable
-- Operable
-- Understandable
-- Robust
+- **P**erceivable
+- **O**perable
+- **U**nderstandable
+- **R**obust
 
 ---
 
 ### Cheatsheet
 
-The guidelines can be quite dry and hard to follow, so take a look at this amazing cheatsheet:
+The guidelines can be quite dry, so here's a cheatsheet:
 [bitsofco.de/the-accessibility-cheatsheet](https://bitsofco.de/the-accessibility-cheatsheet/)
 
 ---
 
 #### Perceivable
 
-Information and user interface components must be presented to users in ways they can perceive.
+Can all users perceive your UI?
 
 e.g. text with sufficient size/contrast/line-height, images with alt-text, alerting screenreaders to dynamic content.
 
@@ -271,7 +283,7 @@ e.g. use plain English, set the `lang` attribute, label inputs, provide error me
 
 #### Robust
 
-Content should be robust enough to be interpreted by a wide range of user-agents, including assistive technologies.
+Can your content be understood by different user-agents/assistive tech?
 
 e.g. semantic HTML (and ARIA when this fails you), automated and manual testing.
 
@@ -279,45 +291,47 @@ e.g. semantic HTML (and ARIA when this fails you), automated and manual testing.
 
 ## WAI-ARIA
 
-Stands for *Web Accessibility Initiative – Accessible Rich Internet Applications*...
+Stands for _Web Accessibility Initiative – Accessible Rich Internet Applications_...
 
 A spec for assigning meaning to otherwise meaningless chunks of markup.
 
 ---
 
-It's usually used in web-applications where functionality is added with JavaScript, which goes beyond the capabilities of semantic <abbr>HTML</abbr>. It can turn div-soup into something a screenreader can understand.
+### ARIA gives divs superpowers
+
+---
+
+Useful where functionality is added with JS, when you're beyond semantic <abbr>HTML</abbr>.
+
+Turn div-soup into something a screenreader can understand.
 
 ---
 
 ### Labels
 
-If your content is visually obvious, but would be incomprehensible when read out by a screenreader you probably need to label it.
+Visually obvious content might need a text label.
 
-`aria-label` lets you provide an extra description of an element: `<button aria-label="menu button">☰</button>`
+e.g. `<button aria-label="menu button">☰</button>`
 
 ---
 
 ### Roles
 
-If you are replicating native browser functionality with JavaScript, roles can add screenreader functionality.
+Signifies your custom component as a type assistive tech can recognise.
 
-For example a custom `<select>` using divs could use `role="listbox"` to communicate its purpose.
+e.g. a custom `<select>` using divs could use `role="listbox"`.
 
 ---
 
 ### Live regions
 
-Screenreaders don't usually read out content that gets dynamically added to the page. `aria-live` marks a region to be watched and read out whenever the content changes.
+Ensures dynamically updated content is read out.
 
-Two values: "polite" or "assertive". Polite will be read once the current task is complete, but assertive will interrupt.
+`aria-live="polite"` will be read once the current info finished, `aria-live="assertive"` will interrupt.
 
 ---
 
 ![](assets/img/aria-live.png)
-
----
-
-## Demo time 😰
 
 ---
 
@@ -332,5 +346,6 @@ Two values: "polite" or "assertive". Polite will be read once the current task i
 ---
 
 # Thanks 🔥
-[@_oliverjam](https://twitter.com/_oliverjam)
+
+[@\_oliverjam](https://twitter.com/_oliverjam)
 [oliverjam.es](http://oliverjam.es)
