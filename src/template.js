@@ -19,16 +19,7 @@ module.exports = ({ content }) => `
     ${content}
     </section>
   </main>
-  <svg class="progress">
-    <circle
-    class="progress-ring__circle"
-    stroke="white"
-    stroke-width="4"
-    fill="transparent"
-    r="52"
-    cx="60"
-    cy="60"/>
-  </svg>
+  <div class="progress"></div>
     <script src='/assets/index.js'></script>
     <script src='/assets/prism.js'></script>
     <script>
