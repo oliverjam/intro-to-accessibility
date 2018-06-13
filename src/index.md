@@ -1,4 +1,4 @@
-# Accessibility
+# Accessibility for Everyone
 [@_oliverjam](https://twitter.com/_oliverjam)
 [oliverjam.es](http://oliverjam.es)
 
@@ -154,6 +154,8 @@ I am deaf and cannot hear anything.
 
 British Sign Language is my first language, so I struggle to read and write English. Subtitles are difficult for me to follow so I prefer signed content.
 
+I also need an option for non-phone communication.
+
 ---
 
 ### Motor
@@ -247,29 +249,7 @@ The guidelines can be quite dry and hard to follow, so take a look at this amazi
 
 Information and user interface components must be presented to users in ways they can perceive.
 
----
-
-##### Text content
-
-Text should be legible, with adequate size, contrast, line-length and line-height.
-
----
-
-##### Colour
-
-Information should not solely be communicated by colour. Use icons or text labels to make colour meanings clear. Alternatively provide colour-blind modes that change UI colours.
-
----
-
-##### Alternative content
-
-Use alt text for images that are relevant to content. Purely decorative images should have empty `alt=""`. Make sure videos have captions or transcripts.
-
----
-
-##### Dynamic content
-
-Ensure screenreaders have access to content you dynamically add to the page.
+e.g. text with sufficient size/contrast/line-height, images with alt-text, alerting screenreaders to dynamic content.
 
 ---
 
@@ -277,35 +257,7 @@ Ensure screenreaders have access to content you dynamically add to the page.
 
 Can all users operate the UI components and navigation?
 
----
-
-##### Keyboard accessible
-
-Ensure all functionality is able to be accessed using only the keyboard.
-
----
-
-##### Time-limits
-
-Don't enforce arbitrary time-limits. Ensure all users have enough time to complete their task.
-
----
-
-##### Links
-
-Ensure link texts tells users where they're going to be taken (rather than multiple links of "click here").
-
----
-
-##### Headings
-
-Ensure headings usefully subdivide content, and are hierarchical. They should describe the structure of the page.
-
----
-
-##### Page titles
-
-Use unique and descriptive titles for each page, rather than the same one for every page on the site. This is the first thing a screenreader user hears.
+e.g. ensure keyboard functionality, no unnecessary time-limits, descriptive link text, hierarchical headings, unique & descriptive page titles.
 
 ---
 
@@ -313,29 +265,7 @@ Use unique and descriptive titles for each page, rather than the same one for ev
 
 Can all your users understand the content and how to use the interface?
 
----
-
-##### Plain English
-
-Use plain English, with short, simple and clear content. Even highly-educated users prefer reading simple content.
-
----
-
-##### Language
-
-Use the `lang` attribute to set the language of elements. This usually goes on the `<html>` element, but if you change languages inside the page make sure you update this.
-
----
-
-##### Labels
-
-Always label form fields with `<label for"input-id">`. Some screenreaders do not read out placeholder text.
-
----
-
-##### Errors
-
-Provide helpful error messages in context. Don't show all input validation at the bottom of a form for example.
+e.g. use plain English, set the `lang` attribute, label inputs, provide error messages in context.
 
 ---
 
@@ -343,29 +273,7 @@ Provide helpful error messages in context. Don't show all input validation at th
 
 Content should be robust enough to be interpreted by a wide range of user-agents, including assistive technologies.
 
----
-
-##### Semantic HTML
-
-Use appropriate <abbr>HTML</abbr> elements to communicate meaning to screenreaders. This includes <abbr>HTML5</abbr> block-level elements like `<nav>` and `<footer>`.
-
----
-
-##### WAI-ARIA
-
-Use <abbr>ARIA</abbr> attributes to communicate semantics when <abbr>HTML</abbr> fails you.
-
----
-
-##### Automated testing
-
-Run your site through automated testing tools to catch obvious mistakes.
-
----
-
-##### Manual testing
-
-Automated testing can only go so far. Make sure you manually test with assistive technologies.
+e.g. semantic HTML (and ARIA when this fails you), automated and manual testing.
 
 ---
 
@@ -406,6 +314,10 @@ Two values: "polite" or "assertive". Polite will be read once the current task i
 ---
 
 ![](assets/img/aria-live.png)
+
+---
+
+## Demo time 😰
 
 ---
 
