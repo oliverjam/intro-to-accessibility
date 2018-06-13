@@ -6,9 +6,9 @@ const keyCodes = {
 };
 
 const slides = Array.from(document.querySelectorAll('.slide'));
-slides.forEach((slide, i) => (slide.id = `slide-${i}`));
+slides.forEach((slide, i) => (slide.id = i));
 
-let currentSlide = 0;
+let currentSlide = Number(window.location.hash.split('#')[1]) || 0;
 
 function scroll(e) {
   if (e.keyCode === keyCodes.up) {
@@ -42,7 +42,7 @@ function scroll(e) {
 }
 
 function scrollToSlide(index) {
-  window.location.href = window.location.origin + `#slide-${index}`;
+  window.location.hash = index;
 }
 
 document.addEventListener('keydown', scroll);
@@ -55,4 +55,5 @@ function updateProgress(index) {
   }`;
 }
 
+scrollToSlide(currentSlide);
 updateProgress(currentSlide);
