@@ -78,7 +78,7 @@ me when I forget my headphones at work 🎧
 
 ---
 
-##### One-handed navigation
+#### One-handed navigation
 
 user with one arm
 _or_
@@ -110,7 +110,7 @@ Not everyone _always_ chooses the browser they use.
 
 May struggle to perceive the difference between certain colours.
 
-- Do note rely solely on colour
+- Do not rely solely on colour
 - Allow customisation/colour-blind mode
 
 ---
