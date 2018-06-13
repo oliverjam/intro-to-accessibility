@@ -4,9 +4,10 @@
   "description": "https://src-yqbqdyglpz.now.sh/",
   "main": "index.js",
   "scripts": {
-    "generate": "nodemon --ext js,md src/generate-html.js index.md",
+    "generate": "node src/generate-html.js index.md",
+    "generate:dev": "nodemon --ext js,md src/generate-html.js index.md",
     "serve": "browser-sync start --server 'dist' --files 'dist' --no-notify",
-    "start": "npm-run-all --parallel generate serve"
+    "dev": "npm-run-all --parallel generate serve"
   },
   "repository": {
     "type": "git",
